@@ -14,14 +14,16 @@ Summary: The LLVM Linker
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/lld-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/lld-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/lld-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/lld-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/lld-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/lld-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/lld-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/lld-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/lld-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/lld-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/lld-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/lld-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/lld/badges/version.svg)](https://anaconda.org/conda-forge/lld)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/lld/badges/downloads.svg)](https://anaconda.org/conda-forge/lld)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-lld-green.svg)](https://anaconda.org/conda-forge/lld) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lld.svg)](https://anaconda.org/conda-forge/lld) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lld.svg)](https://anaconda.org/conda-forge/lld) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lld.svg)](https://anaconda.org/conda-forge/lld) |
 
 Installing lld
 ==============

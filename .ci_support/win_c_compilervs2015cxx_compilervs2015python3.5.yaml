@@ -1,7 +1,7 @@
 c_compiler:
-- toolchain_c
+- vs2015
 cxx_compiler:
-- toolchain_cxx
+- vs2015
 libxml2:
 - '2.9'
 pin_run_as_build:
@@ -11,4 +11,8 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.6'
+- '3.5'
+zip_keys:
+- - python
+  - c_compiler
+  - cxx_compiler

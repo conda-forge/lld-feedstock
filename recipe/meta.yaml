@@ -11,24 +11,22 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py<35]
-  features:
-    - vc14    # [win and py>=35]
 
 requirements:
   build:
-    - toolchain
     - cmake >=3.4.3
     - ninja    # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - llvmdev =={{ version }}
-    - libxml2 2.9.*
+    - libxml2
     - swig
-    - vc 14    # [win]
     - libcxx   # [osx]
   run:
-    - vc 14    # [win]
     - libcxx   # [osx]
     - llvmdev =={{ version }}
     - python

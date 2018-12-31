@@ -1,5 +1,5 @@
-{% set version = "7.0.0" %}
-{% set sha256 = "fbcf47c5e543f4cdac6bb9bbbc6327ff24217cd7eafc5571549ad6d237287f9c" %}
+{% set version = "6.0.1" %}
+{% set sha256 = "e706745806921cea5c45700e13ebe16d834b5e3c0b7ad83bf6da1f28b0634e11" %}
 
 package:
   name: lld
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py<35]
 
 requirements:

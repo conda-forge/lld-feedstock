@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
-  skip: true  # [win and py<35]
+  number: 1003
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -21,21 +21,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
     - llvmdev =={{ version }}
     - libxml2
     - swig
     - libcxx   # [osx]
   run:
     - libcxx   # [osx]
-    - llvmdev =={{ version }}
-    - python
+    - llvm-meta =={{ version }}
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}  # [win]
-    - cmake >=3.4.3
-
   commands:
     - ld.lld --version  # [linux]
     - lld-link /?  # [win]

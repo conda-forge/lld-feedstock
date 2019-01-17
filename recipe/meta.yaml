@@ -1,5 +1,5 @@
-{% set version = "7.0.0" %}
-{% set sha256 = "fbcf47c5e543f4cdac6bb9bbbc6327ff24217cd7eafc5571549ad6d237287f9c" %}
+{% set version = "7.0.1" %}
+{% set sha256 = "8869aab2dd2d8e00d69943352d3166d159d7eae2615f66a684f4a0999fc74031" %}
 
 package:
   name: lld
@@ -24,10 +24,8 @@ requirements:
     - llvmdev =={{ version }}
     - libxml2
     - swig
-    - libcxx   # [osx]
-  run:
-    - libcxx   # [osx]
-    - llvm-meta =={{ version }}
+  run_constrained:
+    - llvmdev =={{ version }}
 
 test:
   commands:

@@ -24,10 +24,8 @@ requirements:
     - llvmdev =={{ version }}
     - libxml2
     - swig
-    - libcxx   # [osx]
-  run:
-    - libcxx   # [osx]
-    - llvm-meta =={{ version }}
+  run_constrained:
+    - llvmdev =={{ version }}
 
 test:
   commands:

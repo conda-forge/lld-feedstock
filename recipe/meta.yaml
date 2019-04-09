@@ -22,7 +22,6 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - llvmdev =={{ version }}
-    - libxml2
     - swig
   run_constrained:
     - llvmdev =={{ version }}

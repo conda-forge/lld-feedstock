@@ -1,5 +1,5 @@
-{% set version = "7.0.1" %}
-{% set sha256 = "8869aab2dd2d8e00d69943352d3166d159d7eae2615f66a684f4a0999fc74031" %}
+{% set version = "8.0.0" %}
+{% set sha256 = "9caec8ec922e32ffa130f0fb08e4c5a242d7e68ce757631e425e9eba2e1a6e37" %}
 
 package:
   name: lld
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1003
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -22,7 +22,6 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - llvmdev =={{ version }}
-    - libxml2
     - swig
   run_constrained:
     - llvmdev =={{ version }}

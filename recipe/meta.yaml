@@ -23,6 +23,7 @@ requirements:
   host:
     - llvmdev =={{ version }}
     - swig
+    - llvm
   run_constrained:
     - llvmdev =={{ version }}
 

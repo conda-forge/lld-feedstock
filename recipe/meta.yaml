@@ -8,6 +8,8 @@ package:
 source:
   url: http://releases.llvm.org/{{ version }}/lld-{{ version }}.src.tar.xz
   sha256: {{ sha256 }}
+  patches:
+    - cmake.diff
 
 build:
   number: 0

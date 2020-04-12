@@ -21,6 +21,7 @@ requirements:
     - ninja    # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make     # [not win]
   host:
     - llvmdev =={{ version }}
     - swig

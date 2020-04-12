@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1003
+  number: 1004
   skip: true  # [win and vc<14]
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - ninja    # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make
   host:
     - llvmdev =={{ version }}
     - libxml2

@@ -5,7 +5,7 @@ Home: http://llvm.org/
 
 Package license: NCSA
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The LLVM Linker
 
@@ -26,7 +26,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/lld-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/lld-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>

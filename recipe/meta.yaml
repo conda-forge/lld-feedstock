@@ -1,12 +1,12 @@
 {% set version = "10.0.1" %}
-{% set sha256 = "591449e0aa623a6318d5ce2371860401653c48bb540982ccdd933992cb88df7a" %}
+{% set sha256 = "9ec9dc78ac73243bc196b4ca0f856086f7fc5b8978ddd6a572f702752b42bc3c" %}
 
 package:
   name: lld
   version: {{ version }}
 
 source:
-  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version }}/lld-{{ version }}.src.tar.xz
+  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/lld-{{ version.replace(".rc", "rc") }}.src.tar.xz
   sha256: {{ sha256 }}
   patches:
     - cmake.diff

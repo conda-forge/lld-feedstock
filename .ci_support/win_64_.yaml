@@ -3,8 +3,10 @@ c_compiler:
 channel_sources:
 - conda-forge,defaults
 channel_targets:
-- conda-forge main
+- conda-forge llvm_rc
 cxx_compiler:
 - vs2017
+target_platform:
+- win-64
 vc:
 - '14'

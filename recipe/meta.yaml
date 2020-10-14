@@ -1,5 +1,5 @@
-{% set version = "11.0.0.rc1" %}
-{% set sha256 = "9ec9dc78ac73243bc196b4ca0f856086f7fc5b8978ddd6a572f702752b42bc3c" %}
+{% set version = "11.0.0" %}
+{% set sha256 = "efe7be4a7b7cdc6f3bcf222827c6f837439e6e656d12d6c885d5c8a80ff4fd1c" %}
 
 package:
   name: lld

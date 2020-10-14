@@ -14,7 +14,10 @@ cxx_compiler_version:
 - '*'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
+target_platform:
+- osx-64
 vc:
 - '14'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version

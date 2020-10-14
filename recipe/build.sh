@@ -11,6 +11,9 @@ cmake \
   -DCMAKE_BUILD_TYPE=Release \
   -DLLVM_ENABLE_RTTI=ON \
   -DLLVM_INCLUDE_TESTS=OFF \
+  -DLLVM_OBJ_ROOT=${PREFIX} \
+  -DLLVM_MAIN_INCLUDE_DIR=${PREFIX}/include \
+  -DLLVM_CMAKE_PATH=${PREFIX}/lib/cmake/llvm \
   ${CMAKE_ARGS} \
   ..
 

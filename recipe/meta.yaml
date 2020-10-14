@@ -24,7 +24,6 @@ requirements:
     - make     # [not win]
   host:
     - llvmdev =={{ version }}
-    - swig
     - llvm
   run_constrained:
     - llvm =={{ version }}

@@ -12,8 +12,7 @@ source:
     - cmake.diff
 
 build:
-  number: 0
-  skip: true  # [win and vc<14]
+  number: 1
 
 requirements:
   build:
@@ -29,6 +28,29 @@ requirements:
   run_constrained:
     - llvm =={{ version }}
 
+outputs:
+  - name: lld
+    script: install.sh  # [unix]
+  - name: wasm-lld
+    script: install.sh  # [unix]
+    requirements:
+      build:
+        - cmake >=3.4.3
+        - ninja    # [win]
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - make     # [not win]
+        - llvmdev =={{ version }}    # [build_platform != target_platform]
+      host:
+        - llvmdev =={{ version }}
+        - llvm
+        - {{ pin_subpackage('lld', exact=True) }}
+      run_constrained:
+        - llvm =={{ version }}
+    test:
+      commands:
+        - wasm-lld --version  # [linux]
+
 test:
   commands:
     - ld.lld --version  # [linux]
@@ -43,3 +65,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+    - wolfv

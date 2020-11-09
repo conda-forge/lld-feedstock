@@ -14,8 +14,8 @@ cmake \
   -DLLVM_OBJ_ROOT=${PREFIX} \
   -DLLVM_MAIN_INCLUDE_DIR=${PREFIX}/include \
   -DLLVM_CMAKE_PATH=${PREFIX}/lib/cmake/llvm \
+  -DLLVM_TARGETS_TO_BUILD="Host;WebAssembly" \
   ${CMAKE_ARGS} \
   ..
 
 make -j${CPU_COUNT}
-make install

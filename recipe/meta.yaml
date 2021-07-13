@@ -36,7 +36,7 @@ test:
 about:
   home: http://llvm.org/
   license: NCSA
-  license_file: LICENSE.TXT
+  license_file: lld/LICENSE.TXT
   summary: The LLVM Linker
 
 extra:

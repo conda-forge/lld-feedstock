@@ -15,7 +15,7 @@ cmake \
   -DLLVM_MAIN_INCLUDE_DIR=${PREFIX}/include \
   -DLLVM_CMAKE_PATH=${PREFIX}/lib/cmake/llvm \
   ${CMAKE_ARGS} \
-  ..
+  ../lld
 
 make -j${CPU_COUNT}
 make install

@@ -13,7 +13,7 @@ cmake -G "Ninja" ^
     -DLLVM_INCLUDE_TESTS=OFF ^
     -DLLVM_INCLUDE_DOCS=OFF ^
     -DLLVM_TEMPORARILY_ALLOW_OLD_TOOLCHAIN=ON ^
-    %SRC_DIR%
+    %SRC_DIR%/lld
 
 if errorlevel 1 exit 1
 

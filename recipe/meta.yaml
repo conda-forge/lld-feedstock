@@ -8,7 +8,7 @@ source:
   url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/llvm-project-{{ version.replace(".rc", "rc") }}.src.tar.xz
   sha256: 129cb25cd13677aad951ce5c2deb0fe4afc1e9d98950f53b51bdcfb5a73afa0e
   patches:
-    - cmake.diff
+    - patches/0001-Set-LLVM-directories.patch
 
 build:
   number: 0

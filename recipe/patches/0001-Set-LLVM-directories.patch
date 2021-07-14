@@ -1,7 +1,7 @@
 From 00c86cb02bd90523d8c4dc4d06f1aaa039affb73 Mon Sep 17 00:00:00 2001
 From: Isuru Fernando <isuruf@gmail.com>
 Date: Wed, 14 Oct 2020 10:03:55 -0500
-Subject: [PATCH] Set LLVM directories
+Subject: [PATCH 1/2] Set LLVM directories
 
 ---
  lld/CMakeLists.txt | 4 +++-

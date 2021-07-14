@@ -1,15 +1,15 @@
-{% set version = "11.1.0" %}
-{% set sha256 = "017a788cbe1ecc4a949abf10755870519086d058a2e99f438829aef24f0c66ce" %}
+{% set version = "12.0.1" %}
 
 package:
   name: lld
   version: {{ version }}
 
 source:
-  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/lld-{{ version.replace(".rc", "rc") }}.src.tar.xz
-  sha256: {{ sha256 }}
+  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/llvm-project-{{ version.replace(".rc", "rc") }}.src.tar.xz
+  sha256: 129cb25cd13677aad951ce5c2deb0fe4afc1e9d98950f53b51bdcfb5a73afa0e
   patches:
-    - cmake.diff
+    - patches/0001-Set-LLVM-directories.patch
+    - patches/0002-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
 
 build:
   number: 0
@@ -37,7 +37,7 @@ test:
 about:
   home: http://llvm.org/
   license: NCSA
-  license_file: LICENSE.TXT
+  license_file: lld/LICENSE.TXT
   summary: The LLVM Linker
 
 extra:

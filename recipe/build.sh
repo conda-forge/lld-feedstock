@@ -5,6 +5,10 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
     CMAKE_ARGS="$CMAKE_ARGS -DLLVM_CONFIG_PATH=$BUILD_PREFIX/bin/llvm-config -DLLVM_TABLEGEN_EXE=$BUILD_PREFIX/bin/llvm-tblgen"
 fi
 
+if [[ "$target_platform" == osx-* ]]; then
+    CMAKE_ARGS="$CMAKE_ARGS -DLLVM_HAVE_LIBXAR=1"
+fi
+
 cmake \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DCMAKE_PREFIX_PATH=$PREFIX \

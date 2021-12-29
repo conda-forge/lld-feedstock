@@ -1,5 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '10.12'
+MACOSX_SDK_VERSION:
+- '10.12'
 c_compiler:
 - clang_bootstrap
 c_compiler_version:
@@ -16,8 +18,6 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 target_platform:
 - osx-64
-vc:
-- '14'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

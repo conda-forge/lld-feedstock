@@ -13,6 +13,11 @@ c_compiler_version:     # [osx]
 cxx_compiler_version:   # [osx]
   - "*"                 # [osx]
 
+MACOSX_DEPLOYMENT_TARGET:  # [osx]
+- '10.12'                  # [osx]
+MACOSX_SDK_VERSION:        # [osx]
+- '10.12'                  # [osx]
+
 channel_targets:
   - conda-forge llvm_rc
 

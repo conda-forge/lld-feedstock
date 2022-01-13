@@ -1,4 +1,4 @@
-{% set version = "13.0.0" %}
+{% set version = "13.0.0.rc2" %}
 
 package:
   name: lld
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/llvm-project-{{ version.replace(".rc", "rc") }}.src.tar.xz
-  sha256: 6075ad30f1ac0e15f07c1bf062c1e1268c241d674f11bd32cdf0e040c71f2bf3
+  sha256: 62c80357c23630365758656753268949e81ac12c15e077699919713998514e41
   patches:
     - patches/0001-Set-LLVM-directories.patch
     - patches/0002-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch

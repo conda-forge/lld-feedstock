@@ -1,11 +1,12 @@
-{% set version = "13.0.0.rc2" %}
+{% set version = "13.0.0" %}
+{% set version_rc = "13.0.0.rc2" %}
 
 package:
   name: lld
   version: {{ version }}
 
 source:
-  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/llvm-project-{{ version.replace(".rc", "rc") }}.src.tar.xz
+  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version_rc.replace(".rc", "-rc") }}/llvm-project-{{ version_rc.replace(".rc", "rc") }}.src.tar.xz
   sha256: 62c80357c23630365758656753268949e81ac12c15e077699919713998514e41
   patches:
     - patches/0001-Set-LLVM-directories.patch

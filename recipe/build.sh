@@ -6,7 +6,7 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
 fi
 
 if [[ "$target_platform" == osx-* ]]; then
-    CMAKE_ARGS="$CMAKE_ARGS -DLLVM_HAVE_LIBXAR=0"
+    CMAKE_ARGS="$CMAKE_ARGS -DLLVM_ENABLE_LIBXAR=OFF"
 fi
 
 cmake \

@@ -27,7 +27,7 @@ requirements:
     - llvmdev =={{ version }}
     - llvm
     - libxml2  # [win]
-    - zlib     # [not osx]
+    - zlib     # [win]
   run_constrained:
     - llvm =={{ version }}
 

@@ -1,0 +1,26 @@
+From 328e78a2acdb31a7d3e5aace2a4b23e69c0057a9 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Wed, 14 Jul 2021 21:53:53 +0200
+Subject: [PATCH 2/2] point header inclusion in lld/MachO/CMakeLists.txt to
+ SRC_DIR
+
+---
+ lld/MachO/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lld/MachO/CMakeLists.txt b/lld/MachO/CMakeLists.txt
+index b76f37dcc..2ad9cfc77 100644
+--- a/lld/MachO/CMakeLists.txt
++++ b/lld/MachO/CMakeLists.txt
+@@ -2,7 +2,7 @@ set(LLVM_TARGET_DEFINITIONS Options.td)
+ tablegen(LLVM Options.inc -gen-opt-parser-defs)
+ add_public_tablegen_target(MachOOptionsTableGen)
+ 
+-include_directories(${LLVM_MAIN_SRC_DIR}/../libunwind/include)
++include_directories($ENV{SRC_DIR}/libunwind/include)
+ 
+ add_lld_library(lldMachO2
+   Arch/X86_64.cpp
+-- 
+2.31.1.windows.1
+

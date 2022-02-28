@@ -1,15 +1,15 @@
-{% set version = "11.0.0.rc1" %}
-{% set sha256 = "9ec9dc78ac73243bc196b4ca0f856086f7fc5b8978ddd6a572f702752b42bc3c" %}
+{% set version = "13.0.1" %}
 
 package:
   name: lld
   version: {{ version }}
 
 source:
-  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/lld-{{ version.replace(".rc", "rc") }}.src.tar.xz
-  sha256: {{ sha256 }}
+  url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/llvm-project-{{ version.replace(".rc", "rc") }}.src.tar.xz
+  sha256: 326335a830f2e32d06d0a36393b5455d17dc73e0bd1211065227ee014f92cbf8
   patches:
-    - cmake.diff
+    - patches/0001-Set-LLVM-directories.patch
+    - patches/0002-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
 
 build:
   number: 0
@@ -22,10 +22,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make     # [not win]
+    - llvmdev =={{ version }}    # [build_platform != target_platform]
   host:
     - llvmdev =={{ version }}
-    - swig
     - llvm
+    - libxml2  # [win]
+    - zlib     # [win]
   run_constrained:
     - llvm =={{ version }}
 
@@ -37,9 +39,10 @@ test:
 about:
   home: http://llvm.org/
   license: NCSA
-  license_file: LICENSE.TXT
+  license_file: lld/LICENSE.TXT
   summary: The LLVM Linker
 
 extra:
   recipe-maintainers:
     - isuruf
+    - h-vetinari

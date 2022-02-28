@@ -1,0 +1,30 @@
+From 00c86cb02bd90523d8c4dc4d06f1aaa039affb73 Mon Sep 17 00:00:00 2001
+From: Isuru Fernando <isuruf@gmail.com>
+Date: Wed, 14 Oct 2020 10:03:55 -0500
+Subject: [PATCH 1/2] Set LLVM directories
+
+---
+ lld/CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/lld/CMakeLists.txt b/lld/CMakeLists.txt
+index d4e561b50..083cade59 100644
+--- a/lld/CMakeLists.txt
++++ b/lld/CMakeLists.txt
+@@ -27,10 +27,12 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+ 
+   list(GET LLVM_CONFIG_OUTPUT 0 OBJ_ROOT)
+   list(GET LLVM_CONFIG_OUTPUT 1 MAIN_INCLUDE_DIR)
+-  list(GET LLVM_CONFIG_OUTPUT 2 LLVM_CMAKE_PATH)
++  list(GET LLVM_CONFIG_OUTPUT 2 MAIN_CMAKE_PATH)
+   list(GET LLVM_CONFIG_OUTPUT 3 MAIN_SRC_DIR)
+ 
+   set(LLVM_OBJ_ROOT ${OBJ_ROOT} CACHE PATH "path to LLVM build tree")
++  set(LLVM_CMAKE_PATH ${MAIN_CMAKE_PATH} CACHE PATH "path to llvm cmake module")
++  file(TO_CMAKE_PATH ${LLVM_CMAKE_PATH} LLVM_CMAKE_PATH)
+   set(LLVM_MAIN_INCLUDE_DIR ${MAIN_INCLUDE_DIR} CACHE PATH "path to llvm/include")
+   set(LLVM_MAIN_SRC_DIR ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
+ 
+-- 
+2.31.1.windows.1
+

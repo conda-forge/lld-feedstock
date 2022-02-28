@@ -1,13 +1,15 @@
 About lld
 =========
 
-Home: http://llvm.org/
+Home: https://lld.llvm.org/
 
 Package license: NCSA
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lld-feedstock/blob/master/LICENSE.txt)
 
 Summary: The LLVM Linker
+
+Development: https://github.com/llvm/llvm-project/
 
 Current build status
 ====================

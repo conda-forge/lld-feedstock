@@ -37,10 +37,11 @@ test:
     - lld-link /?  # [win]
 
 about:
-  home: http://llvm.org/
+  home: https://lld.llvm.org/
   license: NCSA
   license_file: lld/LICENSE.TXT
   summary: The LLVM Linker
+  dev_url: https://github.com/llvm/llvm-project/
 
 extra:
   recipe-maintainers:

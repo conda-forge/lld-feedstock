@@ -1,18 +1,28 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '8'
+- '10'
+cdt_name:
+- cos7
 channel_sources:
-- conda-forge/label/llvm_rc,conda-forge,defaults
+- conda-forge/label/llvm_rc,conda-forge
 channel_targets:
 - conda-forge llvm_rc
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '8'
+- '10'
 docker_image:
-- condaforge/linux-anvil-ppc64le
+- quay.io/condaforge/linux-anvil-ppc64le
+pin_run_as_build:
+  zlib:
+    max_pin: x.x
 target_platform:
 - linux-ppc64le
 vc:
 - '14'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+zlib:
+- '1.2'

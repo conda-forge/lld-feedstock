@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://lld.llvm.org/
-  license: NCSA
+  license: Apache-2.0 WITH LLVM-exception
   license_file: lld/LICENSE.TXT
   summary: The LLVM Linker
   dev_url: https://github.com/llvm/llvm-project/

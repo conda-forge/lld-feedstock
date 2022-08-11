@@ -5,9 +5,9 @@ c_compiler:
 c_compiler_version:
 - '*'
 channel_sources:
-- conda-forge
+- conda-forge/label/llvm_rc,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge llvm_rc
 cxx_compiler:
 - clang_bootstrap
 cxx_compiler_version:
@@ -19,8 +19,6 @@ pin_run_as_build:
     max_pin: x.x
 target_platform:
 - osx-64
-vc:
-- '14'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

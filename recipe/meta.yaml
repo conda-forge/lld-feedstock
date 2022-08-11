@@ -1,4 +1,4 @@
-{% set version = "14.0.0.rc4" %}
+{% set version = "14.0.4" %}
 
 package:
   name: lld
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/llvm/llvm-project/releases/download/llvmorg-{{ version.replace(".rc", "-rc") }}/llvm-project-{{ version.replace(".rc", "rc") }}.src.tar.xz
-  sha256: ca833d5ca97b2d46053f6d2759fcd9ec3201201275e0c2119a4680356f5b0a15
+  sha256: f40c77ceff02ae3873d273a51b0f93cd8e6409576f771d860d75835335522052
   patches:
     - patches/0001-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
 
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://lld.llvm.org/
-  license: NCSA
+  license: Apache-2.0 WITH LLVM-exception
   license_file: lld/LICENSE.TXT
   summary: The LLVM Linker
   dev_url: https://github.com/llvm/llvm-project/

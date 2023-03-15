@@ -20,12 +20,16 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make     # [not win]
-    - llvmdev =={{ version }}    # [build_platform != target_platform]
+    - llvmdev =={{ version }}              # [build_platform != target_platform]
   host:
+    - libcxx {{ cxx_compiler_version }}    # [osx]
+    - libxml2                              # [win]
     - llvmdev =={{ version }}
     - llvm
-    - libxml2  # [win]
     - zlib
+    - zstd
+  run:
+    - libcxx >={{ cxx_compiler_version }}  # [osx]
   run_constrained:
     - llvm =={{ version }}
 

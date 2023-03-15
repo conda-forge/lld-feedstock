@@ -15,11 +15,10 @@ build:
 
 requirements:
   build:
-    - cmake >=3.4.3
-    - ninja    # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make     # [not win]
+    - cmake
+    - ninja
     - llvmdev =={{ version }}              # [build_platform != target_platform]
   host:
     - libcxx {{ cxx_compiler_version }}    # [osx]

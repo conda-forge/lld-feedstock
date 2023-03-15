@@ -5,7 +5,7 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
     CMAKE_ARGS="$CMAKE_ARGS -DLLVM_CONFIG_PATH=$BUILD_PREFIX/bin/llvm-config -DLLVM_TABLEGEN_EXE=$BUILD_PREFIX/bin/llvm-tblgen"
 fi
 
-cmake \
+cmake -G Ninja \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DCMAKE_INSTALL_LIBDIR=$PREFIX/lib \
   -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -17,5 +17,5 @@ cmake \
   ${CMAKE_ARGS} \
   ../lld
 
-make -j${CPU_COUNT}
-make install
+cmake --build .
+cmake --install .

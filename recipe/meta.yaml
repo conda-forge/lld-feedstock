@@ -12,21 +12,23 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and vc<14]
 
 requirements:
   build:
-    - cmake >=3.4.3
-    - ninja    # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make     # [not win]
-    - llvmdev =={{ version }}    # [build_platform != target_platform]
+    - cmake
+    - ninja
+    - llvmdev =={{ version }}              # [build_platform != target_platform]
   host:
+    - libcxx {{ cxx_compiler_version }}    # [osx]
+    - libxml2                              # [win]
     - llvmdev =={{ version }}
     - llvm
-    - libxml2  # [win]
     - zlib
+    - zstd
+  run:
+    - libcxx >={{ cxx_compiler_version }}  # [osx]
   run_constrained:
     - llvm =={{ version }}
 

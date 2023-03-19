@@ -22,9 +22,14 @@ requirements:
     - llvmdev =={{ version }}              # [build_platform != target_platform]
   host:
     - libcxx {{ cxx_compiler_version }}    # [osx]
-    - libxml2                              # [win]
     - llvmdev =={{ version }}
     - llvm
+    # note: these libs may show up as unused in the link check,
+    # but not all the artefacts can be inspected by conda (e.g.
+    # static libs); however, they are present in the host env
+    # as run-deps of llvm and so they will be picked up for the
+    # build by the default settings.
+    - libxml2
     - zlib
     - zstd
   run:

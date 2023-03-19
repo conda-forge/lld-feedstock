@@ -5,13 +5,15 @@ c_compiler:
 c_compiler_version:
 - '*'
 channel_sources:
-- conda-forge/label/llvm_rc,conda-forge
+- conda-forge
 channel_targets:
-- conda-forge llvm_rc
+- conda-forge main
 cxx_compiler:
 - clang_bootstrap
 cxx_compiler_version:
 - '*'
+libxml2:
+- '2.10'
 macos_machine:
 - arm64-apple-darwin20.0.0
 target_platform:
@@ -21,3 +23,5 @@ zip_keys:
   - cxx_compiler_version
 zlib:
 - '1.2'
+zstd:
+- '1.5'

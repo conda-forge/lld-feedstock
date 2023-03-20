@@ -33,7 +33,7 @@ requirements:
     - zlib
     - zstd
   run:
-    - libcxx >={{ cxx_compiler_version }}  # [osx]
+    - {{ pin_compatible("libcxx", max_pin=None) }}  # [osx]
   run_constrained:
     - llvm =={{ version }}
 

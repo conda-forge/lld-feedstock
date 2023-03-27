@@ -12,6 +12,9 @@ source:
 
 build:
   number: 0
+  ignore_run_exports_from:
+    # not actually needed on unix
+    - libxml2  # [unix]
 
 requirements:
   build:
@@ -24,11 +27,8 @@ requirements:
     - libcxx {{ cxx_compiler_version }}    # [osx]
     - llvmdev =={{ version }}
     - llvm
-    # note: these libs may show up as unused in the link check,
-    # but not all the artefacts can be inspected by conda (e.g.
-    # static libs); however, they are present in the host env
-    # as run-deps of llvm and so they will be picked up for the
-    # build by the default settings.
+    # these they are present in the host env anyway as run-deps of llvm
+    # and will be picked up for the build by the default settings
     - libxml2
     - zlib
     - zstd

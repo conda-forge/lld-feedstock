@@ -1,14 +1,4 @@
-c_compiler:
-  - clang_bootstrap  # [osx]
-  - gcc              # [linux]
-  - vs2019           # [win]
-cxx_compiler:
-  - clang_bootstrap  # [osx]
-  - gxx              # [linux]
-  - vs2019           # [win]
-vc:
-  - 14
-c_compiler_version:     # [osx]
-  - "*"                 # [osx]
-cxx_compiler_version:   # [osx]
-  - "*"                 # [osx]
+c_compiler:             # [osx]
+  - clang_bootstrap     # [osx]
+cxx_compiler:           # [osx]
+  - clang_bootstrap     # [osx]

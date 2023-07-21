@@ -17,5 +17,5 @@ cmake -G Ninja \
   ${CMAKE_ARGS} \
   ../lld
 
-cmake --build .
+cmake --build . -- -j${CPU_COUNT}
 cmake --install .

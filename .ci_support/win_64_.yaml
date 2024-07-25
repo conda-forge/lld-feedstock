@@ -1,9 +1,11 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
-- conda-forge/label/llvm_rc,conda-forge
+- conda-forge
 channel_targets:
-- conda-forge llvm_rc
+- conda-forge main
 cxx_compiler:
 - vs2019
 libxml2:
@@ -11,6 +13,6 @@ libxml2:
 target_platform:
 - win-64
 zlib:
-- '1.2'
+- '1'
 zstd:
 - '1.5'

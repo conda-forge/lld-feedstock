@@ -1,0 +1,29 @@
+From 179c770452e60d8b74f5b2d9d2e0818fbd6524c5 Mon Sep 17 00:00:00 2001
+From: Michael Kruse <llvm-project@meinersbur.de>
+Date: Fri, 27 Sep 2024 09:18:49 +0200
+Subject: [PATCH 2/2] [lld] LLVM_ENABLE_RUNTIMES=flang-rt
+
+Extract Flang's runtime library to use the LLVM_ENABLE_RUNTIME
+mechanism.
+---
+ lld/COFF/MinGW.cpp | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/lld/COFF/MinGW.cpp b/lld/COFF/MinGW.cpp
+index 29c01da9e28f..d5614996e490 100644
+--- a/lld/COFF/MinGW.cpp
++++ b/lld/COFF/MinGW.cpp
+@@ -50,8 +50,11 @@ AutoExporter::AutoExporter(
+       "libclang_rt.profile-x86_64",
+       "libc++",
+       "libc++abi",
+-      "libFortranRuntime",
+-      "libFortranDecimal",
++      "libflang_rt",
++      "libflang_rt.static",
++      "libflang_rt.dynamic",
++      "libflang_rt.static_dbg",
++      "libflang_rt.dynamic_dbg",
+       "libunwind",
+       "libmsvcrt",
+       "libucrtbase",

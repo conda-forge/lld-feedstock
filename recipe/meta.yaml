@@ -10,6 +10,8 @@ source:
   sha256: 6453827c61593a987f51a5eaa265f4ccfc60901821c9bbb1c6fd1ac17681f0e3
   patches:
     - patches/0001-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
+    # backport lld bits of https://github.com/llvm/llvm-project/pull/110217
+    - patches/0002-lld-LLVM_ENABLE_RUNTIMES-flang-rt.patch
 
 build:
   number: 0

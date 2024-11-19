@@ -1,14 +1,15 @@
-From 14d6c677c1758066f1ef10635439754cc3161057 Mon Sep 17 00:00:00 2001
+From 5779cd8742e48a43f95c7ef6665cab620930c3d0 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 14 Jul 2021 21:53:53 +0200
-Subject: [PATCH] point header inclusion in lld/MachO/CMakeLists.txt to SRC_DIR
+Subject: [PATCH 1/2] point header inclusion in lld/MachO/CMakeLists.txt to
+ SRC_DIR
 
 ---
  lld/MachO/CMakeLists.txt | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/lld/MachO/CMakeLists.txt b/lld/MachO/CMakeLists.txt
-index ea26889267..3e06eb78fc 100644
+index ecf6ce609e59..a9d60edb19c4 100644
 --- a/lld/MachO/CMakeLists.txt
 +++ b/lld/MachO/CMakeLists.txt
 @@ -2,7 +2,7 @@ set(LLVM_TARGET_DEFINITIONS Options.td)
@@ -19,7 +20,4 @@ index ea26889267..3e06eb78fc 100644
 +include_directories($ENV{SRC_DIR}/libunwind/include)
  
  add_lld_library(lldMachO
-   Arch/ARM.cpp
--- 
-2.38.1.windows.1
-
+   Arch/ARM64.cpp

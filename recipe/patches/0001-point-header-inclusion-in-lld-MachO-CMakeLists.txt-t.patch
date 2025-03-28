@@ -1,8 +1,7 @@
-From 5779cd8742e48a43f95c7ef6665cab620930c3d0 Mon Sep 17 00:00:00 2001
+From 239b163a3e3afbe88f5d147898200fba72566fe3 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Wed, 14 Jul 2021 21:53:53 +0200
-Subject: [PATCH 1/2] point header inclusion in lld/MachO/CMakeLists.txt to
- SRC_DIR
+Subject: [PATCH] point header inclusion in lld/MachO/CMakeLists.txt to SRC_DIR
 
 ---
  lld/MachO/CMakeLists.txt | 2 +-

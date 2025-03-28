@@ -1,4 +1,4 @@
-{% set version = "20.0.0.dev5" %}
+{% set version = "21.0.0.dev1" %}
 
 package:
   name: lld
@@ -6,12 +6,10 @@ package:
 
 source:
   # url: https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-{{ version.replace(".rc", "-rc") }}.tar.gz
-  url: https://github.com/llvm/llvm-project/archive/8f17c908e3858c0a2a9b1bed3f6506fec3c6f910.tar.gz
-  sha256: dee6faf7412e337e888057aab1eb69ee26308e41305006d1897941372dc47c6b
+  url: https://github.com/llvm/llvm-project/archive/e5129b7e2092c54e503f60cc0ac552c765d5a144.tar.gz
+  sha256: f8506cf5d53a5d555384a8917432db40ef8a2b89a5172d64f8a753b649f0274b
   patches:
     - patches/0001-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
-    # backport lld bits of https://github.com/llvm/llvm-project/pull/110217
-    - patches/0002-lld-LLVM_ENABLE_RUNTIMES-flang-rt.patch
 
 build:
   number: 0

@@ -1,4 +1,4 @@
-{% set version = "21.1.0.rc1" %}
+{% set version = "21.1.0.rc2" %}
 
 package:
   name: lld
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-{{ version.replace(".rc", "-rc") }}.tar.gz
-  sha256: 43c05ada2449f545d35a2530a44ef64a3de7e9dd54e6c53eaa7ffb419daa4f9e
+  sha256: f28b419ea38e554c295969c4d7fc3ea3b517d893b9f35e8e7aff50c507549459
   patches:
     - patches/0001-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
 

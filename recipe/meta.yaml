@@ -1,4 +1,4 @@
-{% set version = "21.1.0.rc3" %}
+{% set version = "21.1.8" %}
 
 package:
   name: lld
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-{{ version.replace(".rc", "-rc") }}.tar.gz
-  sha256: f54cd5397f60a9f22f0b4a24fb9e9a1625a2499aca97c6cf3b418a77d039923a
+  sha256: 7ba3f2a8d8fda88be18a31d011e8195d3b7f87f9fa92b20c94cba2d7f65b0e3f
   patches:
     - patches/0001-point-header-inclusion-in-lld-MachO-CMakeLists.txt-t.patch
 
@@ -14,7 +14,7 @@ build:
   number: 0
   ignore_run_exports_from:
     # not actually needed on unix
-    - libxml2  # [unix]
+    - libxml2-devel  # [unix]
 
 requirements:
   build:
@@ -30,7 +30,7 @@ requirements:
     - llvm
     # these they are present in the host env anyway as run-deps of llvm
     # and will be picked up for the build by the default settings
-    - libxml2
+    - libxml2-devel
     - zlib
     - zstd
   run:

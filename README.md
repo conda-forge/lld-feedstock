@@ -67,10 +67,10 @@ Current release info
 Installing lld
 ==============
 
-Installing `lld` from the `conda-forge/label/llvm_rc` channel can be achieved by adding `conda-forge/label/llvm_rc` to your channels with:
+Installing `lld` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/llvm_rc
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
@@ -116,7 +116,7 @@ It is possible to list all of the versions of `lld` available on your platform:
 <summary>With conda</summary>
 
 ```
-conda search lld --channel conda-forge/label/llvm_rc
+conda search lld --channel conda-forge
 ```
 
 </details>
@@ -125,7 +125,7 @@ conda search lld --channel conda-forge/label/llvm_rc
 <summary>With mamba</summary>
 
 ```
-mamba search lld --channel conda-forge/label/llvm_rc
+mamba search lld --channel conda-forge
 ```
 
 </details>
@@ -134,7 +134,7 @@ mamba search lld --channel conda-forge/label/llvm_rc
 <summary>With pixi</summary>
 
 ```
-pixi search lld --channel conda-forge/label/llvm_rc
+pixi search lld --channel conda-forge
 ```
 
 </details>
@@ -144,13 +144,13 @@ pixi search lld --channel conda-forge/label/llvm_rc
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search lld --channel conda-forge/label/llvm_rc
+mamba repoquery search lld --channel conda-forge
 
 # List packages depending on `lld`:
-mamba repoquery whoneeds lld --channel conda-forge/label/llvm_rc
+mamba repoquery whoneeds lld --channel conda-forge
 
 # List dependencies of `lld`:
-mamba repoquery depends lld --channel conda-forge/label/llvm_rc
+mamba repoquery depends lld --channel conda-forge
 ```
 
 </details>
